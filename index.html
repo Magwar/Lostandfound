@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lost and Found</title>
+</head>
+<body>
+<header>
+    <h1>Lost n' Found Service</h1>
+    <nav class="navbar">
+        <!-- <div class="search"><input type="text"></div> -->
+        <a href="#">Home</a>
+        <a href="#find.html">Find Item</a>
+        <a href="#">Report Item</a>
+        <a href="#">Contact Us</a>
+    </nav>
+</header>
+<main>
+    <section id="home">
+        <h2>Welcome to our Lost and Found Service</h2>
+        <p>Helping you find what's lost and reconnect with what's found.</p>
+    </section>
+    <section id="report-lost">
+        <h2>Report a Lost Item</h2>
+        <form action="/submit_lost_item" method="post">
+            <!-- Include relevant form fields (e.g., item description, location, date, photo) -->
+            <label for="itemDescription">Item Description:</label>
+            <input type="text" id="itemDescription" name="itemDescription" required>
+            <!-- Add other form fields here -->
+            <button type="submit">Submit Report</button>
+        </form>
+    </section>
+    <section id="report-found">
+        <h2>Report a Found Item</h2>
+        <form action="/submit_found_item" method="post">
+            <!-- Include relevant form fields (e.g., item description, location, date, photo) -->
+            <label for="foundItemDescription">Item Description:</label>
+            <input type="text" id="foundItemDescription" name="foundItemDescription" required>
+            <!-- Add other form fields here -->
+            <button type="submit">Submit Report</button>
+        </form>
+    </section>
+    <section id="search-listings">
+        <h2>Search Lost and Found Items</h2>
+        <!-- Add a search form and display listings of lost and found items -->
+        <form action="/search_items" method="get">
+            <!-- Include search fields and filters -->
+            <label for="searchKeyword">Search Keyword:</label>
+            <input type="text" id="searchKeyword" name="searchKeyword">
+            <!-- Add other search filters here -->
+            <button type="submit">Search</button>
+        </form>
+        <!-- Display search results here -->
+    </section>
+</main>
+<footer>
+    <p>&copy; 2023 Lost n' Found. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
